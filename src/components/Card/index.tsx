@@ -1,3 +1,5 @@
+/* eslint-disable @next/next/link-passhref */
+import Link from 'next/link';
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
@@ -11,6 +13,7 @@ interface PropsCard {
   imagepath: string;
   title: string;
   description: string;
+  id: number;
 }
 const useStyles = makeStyles({
   root: {
@@ -25,6 +28,7 @@ export default function ComponentCard({
   imagepath,
   title,
   description,
+  id,
 }: PropsCard) {
   const classes = useStyles();
   return (
@@ -41,8 +45,10 @@ export default function ComponentCard({
         </CardContent>
       </CardActionArea>
       <CardActions>
-        <Button size="small" color="primary">
-          Ler mais
+        <Button variant="outlined" color="primary">
+          <Link href={`/details/${id}`}>
+            <span>Ler mais</span>
+          </Link>
         </Button>
       </CardActions>
     </Card>
