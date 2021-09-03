@@ -20,7 +20,7 @@ This project was made using the follow technologies:
 - [React](https://reactjs.org)
 - [NextJS](https://nextjs.org/)
 - [Axios](https://github.com/axios/axios)
-- [Material UI](https://material-ui.com/)
+- [MaterialUI](https://material-ui.com/)
 
 # 🏃Getting Started
 
